@@ -28,8 +28,6 @@ android {
 
 dependencies {
 //    api project(path:':local:ks')
-    api project(":ks")
-    api project(":bd")
     api "androidx.appcompat:appcompat:1.5.1"
     api 'androidx.legacy:legacy-support-v4:1.0.0'
     api "androidx.recyclerview:recyclerview:1.2.1"
@@ -40,8 +38,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
+
+def libPath = project.getProjectDir().getAbsolutePath()
 afterEvaluate {
-    // 官方建议使用上传方法
     publishing {
         publications {
             // Creates a Maven publication called "release".
@@ -50,6 +49,24 @@ afterEvaluate {
                 groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
                 artifactId = 'libs'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
                 version = '1.0.0' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+            }
+            bd_sdk(MavenPublication) {
+                artifact(libPath+"/Baidu_MobAds_SDK-release_v9.28.aar")
+                groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
+                artifactId = 'bd_sdk'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
+                version = '1.0.3' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+            }
+            bd_tool(MavenPublication) {
+                artifact(libPath+"/Baidu_MobAds_Tools_SDK-release_v1.0.aar")
+                groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
+                artifactId = 'bd_tool'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
+                version = '1.0.3' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+            }
+            oaid(MavenPublication) {
+                artifact(libPath+"/oaid_sdk_1.0.25.aar")
+                groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
+                artifactId = 'oaid'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
+                version = '1.0.3' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
         }
     }
