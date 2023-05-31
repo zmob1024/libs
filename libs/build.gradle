@@ -55,10 +55,10 @@ afterEvaluate {
                 from components.release // 表示发布 release（jitpack 都不会使用到）
                 groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
                 artifactId = 'libs'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
-                version = '1.0.0' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+                version = '1.1.1' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
             bd_sdk(MavenPublication) {
-                artifact(libsPath + "/Baidu_MobAds_SDK-release_v9.28.aar")
+                artifact(libsPath + "/Baidu_MobAds_SDK-release_v9.3.aar")
                 groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
                 artifactId = 'bd_sdk'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
                 version = '9.28' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
@@ -82,13 +82,13 @@ afterEvaluate {
                 version = '1.0.25' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
             wind_com(MavenPublication) {
-                artifact(libsPath + "/wind-common-1.4.4.aar")
+                artifact(libsPath + "/wind-common-1.4.7.aar")
                 groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
                 artifactId = 'wind_com'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
                 version = '1.0.25' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
             wind_sdk(MavenPublication) {
-                artifact(libsPath + "/wind-sdk-4.10.1.aar")
+                artifact(libsPath + "/wind-sdk-4.12.2.aar")
                 groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
                 artifactId = 'wind_com'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
                 version = '1.0.25' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
