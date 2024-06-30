@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         minSdk 21
-        targetSdk 31
+        targetSdk 33
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -39,13 +39,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
-/** 包含
- - bd = 9.3(2023年05月23日)
- - oaid = 1.0.25
- - query = 0.26.7
- - sigmob = 4.12.2(2023-05-30)
- - ks_ct = 3.3.32(--)
- */
+
 def libsPath = project.getProjectDir().getAbsolutePath() + "/libs/"
 afterEvaluate {
     publishing {
@@ -58,10 +52,10 @@ afterEvaluate {
                 version = '1.1.1' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
             z_bd_sdk(MavenPublication) {
-                artifact(libsPath + "/Baidu_MobAds_SDK-release_v9.3.aar")
+                artifact(libsPath + "/Baidu_MobAds_SDK-release_v9.352.aar")
                 groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
                 artifactId = 'bd_sdk'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
-                version = '9.28' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+                version = '9.352' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
             z_bd_tool(MavenPublication) {
                 artifact(libsPath + "/Baidu_MobAds_Tools_SDK-release_v1.0.aar")
@@ -82,22 +76,22 @@ afterEvaluate {
                 version = '1.0.25' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
             z_wind_com(MavenPublication) {
-                artifact(libsPath + "/wind-common-1.4.7.aar")
+                artifact(libsPath + "/wind-common-1.6.9.aar")
                 groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
                 artifactId = 'wind_com'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
-                version = '1.0.25' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+                version = '1.6.9' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
             z_wind_sdk(MavenPublication) {
-                artifact(libsPath + "/wind-sdk-4.12.2.aar")
+                artifact(libsPath + "/wind-sdk-4.19.0.aar")
                 groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
                 artifactId = 'wind_sdk'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
-                version = '1.0.25' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+                version = '4.19.0' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
             z_ks_ct_sdk(MavenPublication) {
-                artifact(libsPath + "/kssdk-ct-3.3.32-publishRelease-3f6200804.aar")
+                artifact(libsPath + "/kssdk-ct-3.3.66.aar")
                 groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
                 artifactId = 'ks_ct_sdk'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
-                version = '1.0.25' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+                version = '3.3.66' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
         }
     }
