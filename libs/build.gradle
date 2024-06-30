@@ -87,8 +87,14 @@ afterEvaluate {
                 artifactId = 'wind_sdk'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
                 version = '4.19.0' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
-            z_ks_ct_sdk(MavenPublication) {
+            /*z_ks_ct_sdk(MavenPublication) {
                 artifact(libsPath + "/kssdk-ct-3.3.66.aar")
+                groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
+                artifactId = 'ks_ct_sdk'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
+                version = '3.3.66' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+            }*/
+            z_ks_ad_sdk(MavenPublication) {
+                artifact(libsPath + "/kssdk-ad-3.3.66.aar")
                 groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
                 artifactId = 'ks_ct_sdk'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
                 version = '3.3.66' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
