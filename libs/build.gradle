@@ -10,7 +10,6 @@ android {
     defaultConfig {
         minSdk 21
         targetSdk 33
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -39,7 +38,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 
-
 def libsPath = project.getProjectDir().getAbsolutePath() + "/libs/"
 afterEvaluate {
     publishing {
@@ -63,7 +61,8 @@ afterEvaluate {
                 artifactId = 'bd_tool'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
                 version = '1.0' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
-/*            z_oaid(MavenPublication) {
+            /*
+                z_oaid(MavenPublication) {
                 artifact(libsPath + "/oaid_sdk_1.0.25.aar")
                 groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
                 artifactId = 'oaid'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
