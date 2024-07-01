@@ -99,6 +99,12 @@ afterEvaluate {
                 artifactId = 'ks_ct_sdk'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
                 version = '3.3.66' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
             }
+            z_csj_ad_sdk(MavenPublication) {
+                artifact(libsPath + "/open_ad_sdk_6.2.1.1.aar")
+                groupId = 'com.github.zmob1024' //groupId 随便取 , 这个是依赖库的组 id
+                artifactId = 'csj_sdk'  //artifactId 随便取 , 依赖库的名称（jitpack 都不会使用到）
+                version = '6.2.1.1' // 当前版本依赖库版本号，这个jitpack不会使用到，只是我们开发者自己查看
+            }
         }
     }
 }
